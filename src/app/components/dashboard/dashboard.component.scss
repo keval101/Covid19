@@ -1,0 +1,43 @@
+.main-container {
+    @apply flex;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%
+}
+
+.content {
+    @apply flex-grow;
+}
+
+.case-cards {
+    @apply flex p-10 justify-between;
+}
+
+.card {
+    @apply shadow-lg p-6 bg-white rounded-lg;
+    width: 250px;
+
+    &:nth-child(1) {
+        color: #F96228; 
+    }
+    &:nth-child(2) {
+        color: #0AB9B8; 
+    }
+    &:nth-child(3) {
+        color: #7D7F87; 
+    }
+    &:nth-child(4) {
+        color: #0AB9B8; 
+    } 
+
+    &-number {
+        @apply font-semibold;
+        font-size: 38px;
+    }
+
+    &-title {
+        @apply font-normal font-semibold;
+    }
+}

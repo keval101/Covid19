@@ -1,0 +1,19 @@
+<div class="main-container">
+
+    <div class="sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    
+    <div class="content">
+        <div class="header-div">
+            <app-global-header></app-global-header>
+        </div>
+        
+        <div class="case-cards">
+            <div class="card" *ngFor = "let case of totalCases">
+                <h1 class="card-number">{{ case.numbers | number }}</h1>
+                <p class="card-title">{{ case.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>

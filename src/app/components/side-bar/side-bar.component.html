@@ -1,0 +1,19 @@
+<p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" position="left">
+    <h1 class="sidebar-title">covid 2021</h1>
+
+    <div class="sidebar-navbar">
+        <ul class="sidebar-navbar-nav">
+            <li class="sidebar-navbar-nav-item">Symptoms</li> 
+            <li class="sidebar-navbar-nav-item">Prevention</li> 
+            <li class="sidebar-navbar-nav-item">Help Line</li> 
+        </ul>
+    </div>
+</p-sidebar>
+
+<!-- <p-button type="button" label="click" class="p-mr-2 text-white bg-black"  ></p-button> -->
+
+<div class="hamburger-icon" (click)="openSidebar()" >
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+</div>
