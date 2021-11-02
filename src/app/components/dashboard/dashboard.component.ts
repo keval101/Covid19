@@ -15,7 +15,6 @@ interface ITotalCases {
 export class DashboardComponent implements OnInit {
 
   totalCases: ITotalCases[];
-
   constructor( private _dataService: CoviddataService) { }
 
   ngOnInit(): void {

@@ -16,20 +16,39 @@
 }
 
 .card {
-    @apply shadow-lg p-6 bg-white rounded-lg;
+    @apply shadow-lg p-6 bg-white rounded-lg ;
     width: 250px;
 
+    &:hover {
+        cursor: pointer;
+    }
     &:nth-child(1) {
-        color: #F96228; 
+        @apply text-purple-700;
+        &:hover {
+            @apply text-white bg-purple-700;
+            transition: all 0.2s ease-out;
+        }
     }
     &:nth-child(2) {
-        color: #0AB9B8; 
+        @apply text-yellow-500;
+        &:hover {
+            @apply text-white bg-yellow-500;
+            transition: all 0.2s ease-out;
+        }
     }
     &:nth-child(3) {
-        color: #7D7F87; 
+        @apply text-green-700; 
+        &:hover {
+            @apply text-white bg-green-700;
+            transition: all 0.2s ease-out;
+        }
     }
     &:nth-child(4) {
-        color: #0AB9B8; 
+        @apply text-red-700; 
+        &:hover {
+            @apply text-white bg-red-700;
+            transition: all 0.2s ease-out;
+        }
     } 
 
     &-number {

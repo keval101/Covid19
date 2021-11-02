@@ -7,7 +7,14 @@
     <div class="search-bar">
         <div class="search-bar-content">
             <img src="../../../assets/images/icons/search-icon.svg" alt="search-icon" class="search-bar-icon">
-            <input type="text" class="search-bar-input" placeholder="Search State">
+            <input type="text" class="search-bar-input" placeholder="Search State" (keyup)="onKeyUp($event)">
+        </div>
+        <div class="search-value-box scrollbar-chrome scrollbar-mozilla" *ngIf = "isSearching">
+            <div *ngFor="let result of results" class="cursor-pointer">
+                {{result.state}}
+            </div>
         </div>
     </div>
+
+
 </div>

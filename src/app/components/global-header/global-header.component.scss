@@ -18,7 +18,7 @@
 }
 
 .search-bar {
-    @apply w-full flex items-center px-5 box-border pr-20;
+    @apply w-full flex items-center px-5 box-border pr-20 relative;
     height: 80px;
     background-color: var(--primary-color);
     border-radius: 0 0 0 2rem;
@@ -30,10 +30,43 @@
     }
 
     &-input {
-        @apply bg-transparent outline-none text-gray-600;
+        @apply w-full bg-transparent outline-none text-gray-600;
     }
 
     &-icon {
         @apply pr-2
     }
+}
+
+.search-value-box {
+    @apply rounded-md overflow-scroll bg-white shadow-md;
+    width: 500px;
+    max-height: 400px;
+    position: absolute;
+    top: 65px;
+
+    div {
+        @apply px-4 py-3;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        
+        &:hover {
+            @apply bg-gray-100;
+        }
+    }
+}
+
+.scrollbar-chrome::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollbar-chrome::-webkit-scrollbar-thumb {
+    @apply rounded;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.scrollbar-mozilla {
+    @apply overflow-y-auto;
+    scrollbar-color: rgba(0, 0, 0, 0.12) #fff;
+    scrollbar-width: thin;
 }
